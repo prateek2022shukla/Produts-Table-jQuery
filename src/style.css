@@ -1,0 +1,108 @@
+body{
+	font-family: Arial;
+	font-size: 80%;
+}
+
+#wrapper{
+	width: 80%;
+	margin: 20px auto 0;
+}
+
+#add_product_form label{
+	display: block;
+	margin-top: 10px;
+}
+
+#add_product_form label span{
+	width: 150px;
+	display: inline-block;
+}
+
+#add_product_form .submit{
+	margin-top: 40px;
+}
+
+#add_product_form .submit input[type="button"] {
+	border-radius: 5px;
+	border: 1px solid #eeeeee;
+	padding: 10px;
+}
+
+input#edit_product{
+	border-radius: 5px;
+	border: 1px solid #eeeeee;
+	padding: 10px;
+	display: none;
+}
+
+.update-btn{
+		border-radius: 5px;
+		border: 1px solid #eeeeee;
+		padding: 10px;
+		display: none;	
+}
+
+#notification > div{
+	padding: 10px;
+	font-weight: bold;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+#notification .close1, #notification .close2{
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	text-decoration: none;
+}
+
+#notification .success{
+	border: 1px solid green;
+	background: #7ED47E;
+	display: none;
+}
+
+#notification .error{
+	border: 1px solid red;
+	background: #FF5733;
+	display: none;
+}
+
+#product_list .delete{
+	margin-left: 10px;
+}
+
+#product_list table{
+	width: 400px;
+}
+
+#product_list table th{
+	text-align: left;
+}
+table{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 4%;
+}
+
+table,tr,th{
+    border:1px solid grey;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 6px 8px;
+    border: 1px solid grey;
+
+}
+th{
+    padding-left: 5%;
+}
+
+#product_list{
+    width: 50%;
+    margin: auto;
+    margin-top: 2%;
+}
