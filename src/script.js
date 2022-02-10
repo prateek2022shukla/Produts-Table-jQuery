@@ -41,7 +41,7 @@ $(".update-btn").hide();
 
 function update(){   
 
-    proList[temp].id = document.getElementById("product_sku").value;
+    // proList[temp].id = document.getElementById("product_sku").value;
     proList[temp].name = document.getElementById("product_name").value;
     proList[temp].price = document.getElementById("product_price").value;
     proList[temp].quantity = document.getElementById("product_quantity").value;
@@ -96,7 +96,52 @@ function submitForm(){
 
 function checkData(val1,val2,val3,val4){
    if(val1=="" && val2 == "" && val3 == "" && val4=="")
-      return false;
+      {
+        document.getElementById("product_sku").style.border = "1px solid red";
+        document.getElementById("product_name").style.border = "1px solid red";
+        document.getElementById("product_price").style.border = "1px solid red";
+        document.getElementById("product_quantity").style.border = "1px solid red";    
+        $(".error").css("display", "block");
+        return false;
+      }
+
+
+    if( isNaN(val1) || !isNaN(val2) || isNaN(val3) || isNaN(val4)){
+        if(isNaN(val1)){
+            document.getElementById("product_sku").style.border = "1px solid red";
+            $(".error").css("display", "block");
+        }
+        else{
+            document.getElementById("product_sku").style.border = "1px solid grey";
+        }
+
+        if(!isNaN(val2)){
+            document.getElementById("product_name").style.border = "1px solid red";
+            $(".error").css("display", "block");
+        }
+        else{
+            document.getElementById("product_name").style.border = "1px solid grey";
+        }
+
+        if(isNaN(val3)){
+            document.getElementById("product_price").style.border = "1px solid red";
+            $(".error").css("display", "block");
+        }
+        else{
+            document.getElementById("product_price").style.border = "1px solid grey";
+        }
+        if(isNaN(val4)){
+            document.getElementById("product_quantity").style.border = "1px solid red";
+            $(".error").css("display", "block");
+        }
+        else{
+            document.getElementById("product_quantity").style.border = "1px solid grey";
+        }
+        
+        return false;
+    }
+   
+
    else
      return true;
 }
